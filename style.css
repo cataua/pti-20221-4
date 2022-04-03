@@ -1,0 +1,47 @@
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+.form-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 250px;
+  padding: 30px;
+  margin: 30px auto;
+  border: 1px solid gray;
+  border-radius: 15px;
+}
+
+.form-login input {
+  display: block;
+  flex: 1 0 100%;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #e7e7e7;  
+}
+
+.form-login .box-actions {
+  display: flex;
+  margin-top: 1rem;
+  flex: 1 1 100%;
+  max-width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.box-actions a {
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.button-submit {
+  display: block;
+  padding: 5px 15px;
+  font-size: 1.2rem;
+  border: none;
+  background: orange;
+  color: white;
+  border-radius: 5px;
+}

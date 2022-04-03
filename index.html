@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarefa 4: Código javascript</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <form id="formLogin" method="post" class="form-login">
+ <input type="text" name="usuario" class="input-user" placeholder="Usuário (seu e-mail cadastrado)" />
+ <input type="password" name="pass" class="input-pass" placeholder="Sua senha cadastrada" />
+ <div class="box-actions">
+   <a href="#" class="forgot">Esqueci a minha senha</a>
+   <button type="submit" class="button-submit" onclick="enviaForm(event)">
+     Logar
+   </button>
+ </div>
+</form>
+<script>
+  function enviaForm(e) {
+   e.preventDefault()
+  const form = document.getElementById('formLogin')
+  const formChildrens = form.childNodes
+  const fields = Array.from(formChildrens).filter((node) => node.nodeName === 'INPUT')
+  const hasNullContent = fields.some((field) =>  !field.value)
+  if (hasNullContent) {
+    alert("Todos os campos são de preenchimento obrigatório")
+  } else {
+    alert("Sucesso!")
+  }
+  }
+</script>
+</body>
+</html>
